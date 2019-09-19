@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvPost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@android:color/white"
+    app:contentPadding="@dimen/card_padding">
+
+        <RelativeLayout
+            android:id="@+id/rlUserDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/def_small_margin">
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="@dimen/def_small_avatar_size"
+                android:layout_height="@dimen/def_small_avatar_size"
+                android:contentDescription="@string/user_image"
+                android:scaleType="centerCrop"
+                android:layout_alignParentLeft="true"
+                tools:background="@mipmap/ic_launcher" />
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10dp"
+                android:layout_toRightOf="@+id/ivAvatar"
+                android:textColor="@color/primary_text"
+                tools:text="Title to post" />
+
+            <TextView
+                android:id="@+id/tvBody"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivAvatar"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_below="@+id/tvTitle"
+
+                android:maxLines="2"
+                tools:text="Body to post" />
+
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
