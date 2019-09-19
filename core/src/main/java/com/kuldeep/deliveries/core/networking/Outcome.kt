@@ -1,8 +1,6 @@
 package com.kuldeep.core.networking
 
-/**
- * Created by karn on 18/1/18.
- */
+
 sealed class Outcome<T> {
     data class Progress<T>(var loading: Boolean) : Outcome<T>()
     data class Success<T>(var data: T) : Outcome<T>()
